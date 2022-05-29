@@ -60,9 +60,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas Kamar</a>
-          </li>
-          <li class="nav-item">
             <a href="galeri.php" class="nav-link">Fasilitas Umum Hotel</a>
           </li>
           <li class="nav-item">

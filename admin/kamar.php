@@ -45,9 +45,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas Kamar</a>
-          </li>
-          <li class="nav-item">
             <a href="galeri.php" class="nav-link">Fasilitas Umum Hotel</a>
           </li>
           <li class="nav-item">
@@ -86,11 +83,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                     <div class="card-body">
                       <table class="table table-bordered">
-                        <thead>
+                        <thead class="text-center">
                         <tr>
                             <th style="width: 10px">NO</th>
                             <th>Jenis Kamar</th>
                             <th>Harga</th>
+                            <th>Fasilitas</th>
                             <th>Foto</th>
                             <th>Aksi</th>
                         </tr>
@@ -111,12 +109,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <td><?php echo "$no"; ?></td>
                               <td><?php echo $row['jenis_kamar']; ?></td>
                               <td><?php echo $row['harga']; ?></td>
+                              <td><?php echo $row['fasilitas']; ?></td>
                               <td>
                                   <img class="d-block" src="gambar/<?php echo $row['foto']; ?>" width="200">
                               </td>
                               <td>
-                                  <a href="edit_kamar.php?id_kamar=<?php echo $row['id_kamar']; ?>" class="btn btn btn-warning">Edit</a>
-                                  <a href="hapus_kamar.php?id_kamar=<?php echo $row['id_kamar']; ?>" class="btn btn btn-danger" onclick="return confirm('Anda yakin akan menghapus data ini ?')">Hapus</a>
+                                  <a href="edit_kamar.php?id_kamar=<?php echo $row['id_kamar']; ?>" class="btn btn btn-warning"><i class="fas fa-edit"></i></a> <br/> <br/>
+                                  <a href="hapus_kamar.php?id_kamar=<?php echo $row['id_kamar']; ?>" class="btn btn btn-danger" onclick="return confirm('Anda yakin akan menghapus data ini ?')"><i class="fa fa-trash"></i></a>
                               </td>
                           </tr>
                           <?php $no++; } ?>
@@ -166,6 +165,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="form-group">
                     <label>Harga</label>
                     <input type="text" class="form-control" name="harga" placeholder="Harga">
+                  </div>
+                  <div class="form-group">
+                    <label>Fasilitas</label>
+                    <input type="text" class="form-control" name="fasilitas" placeholder="Fasilitas">
                   </div>
                   <div class="form-group">
                     <label>Foto Kamar</label>

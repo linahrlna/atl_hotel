@@ -60,9 +60,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas Kamar</a>
-          </li>
-          <li class="nav-item">
             <a href="galeri.php" class="nav-link">Fasilitas Umum Hotel</a>
           </li>
           <li class="nav-item">
@@ -112,10 +109,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <input type="text" class="form-control" value="<?php echo $data['harga']; ?>" name="harga" placeholder="Harga">
                   </div>
                   <div class="form-group">
+                    <label>Fasilitas</label>
+                    <input name="id_kamar" value="<?php echo $data['id_kamar']; ?>" hidden>
+                    <input type="text" class="form-control" value="<?php echo $data['fasilitas']; ?>" name="fasilitas" placeholder="Fasilitas">
+                  </div>
+                  <div class="form-group">
                     <label>Foto Kamar</label>
                     <img class="d-block" src="gambar/<?php echo $data['foto']; ?>" width="200">
                     <input type="file" name="foto" class="form-control" >
                   </div>
+                  
                   <button type="submit" class="btn btn-info">Update</button>
                     </form>
                   </div>

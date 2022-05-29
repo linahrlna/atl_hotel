@@ -39,13 +39,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="index.php" class="nav-link">Home</a>
+            <a href="index.php" class="nav-link">Beranda</a>
           </li>
           <li class="nav-item">
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas</a>
+            <a href="fasilitas.php" class="nav-link">Fasilitas Umum</a>
           </li>
         </ul>
       </div>
@@ -94,29 +94,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <tr>
                                             <td>
                                             <b>Harga :</b> <br>
-                                            <?php 
-                                            $fasilitas_kamar = mysqli_query($koneksi, "select * from kamar");
-                                            while ($a = mysqli_fetch_array($fasilitas_kamar)) {
-                                                if ($a['id_kamar'] == $row['id_kamar']) { ?>
-                                                <?php echo $a['harga']; ?>
-                                                <?php
-                                                }
-                                            }
-                                            ?>
+                                            <?php echo $row['harga']; ?>
                                             </td>
                                           </tr>
                                           <tr>    
                                             <td>
                                             <b>Fasilitas :</b> <br>
-                                            <?php 
-                                            $fasilitas_kamar = mysqli_query($koneksi, "select * from fasilitas_kamar");
-                                            while ($a = mysqli_fetch_array($fasilitas_kamar)) {
-                                                if ($a['id_kamar'] == $row['id_kamar']) { ?>
-                                                <?php echo $a['fasilitas']; ?>
-                                                <?php
-                                                }
-                                            }
-                                            ?> 
+                                            <?php echo $row['fasilitas']; ?>
                                             </td>
                                         </tr>
                                     </table>

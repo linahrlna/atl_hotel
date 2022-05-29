@@ -51,9 +51,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas Kamar</a>
-          </li>
-          <li class="nav-item">
             <a href="galeri.php" class="nav-link">Fasilitas Umum Hotel</a>
           </li>
           <li class="nav-item">
@@ -95,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         $data = mysqli_query($koneksi, "select * from kamar");
                         $jumlah_kamar = mysqli_num_rows($data);
                           ?>
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-4 col-6">
                                 <!-- small card -->
                                 <div class="small-box bg-info">
                                     <div class="inner">
@@ -114,32 +111,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <?php
                         include '../koneksi.php';
                         $no = 1;
-                        $data = mysqli_query($koneksi, "select * from fasilitas_kamar");
-                        $jumlah_fasilitas = mysqli_num_rows($data);
-                          ?>
-                            <div class="col-lg-3 col-6">
-                                <!-- small card -->
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                        <h3><?php echo $jumlah_fasilitas; ?></h3>
-                                        <p>Fasilitas Kamar</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="fas fa-list-alt"></i>
-                                    </div>
-                                    <a href="fasilitas.php" class="small-box-footer">
-                                    More info <i class="fas fa-arrow-circle-right"></i>
-                                    </a>
-                                </div>
-                            </div>  
-                            
-                            <?php
-                        include '../koneksi.php';
-                        $no = 1;
                         $data = mysqli_query($koneksi, "select * from galeri");
                         $jumlah_galeri = mysqli_num_rows($data);
                           ?>
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-4 col-6">
                                 <!-- small card -->
                                 <div class="small-box bg-info">
                                     <div class="inner">
@@ -161,7 +136,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         $data = mysqli_query($koneksi, "select * from users");
                         $jumlah_user = mysqli_num_rows($data);
                           ?>
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-4 col-6">
                                 <!-- small card -->
                                 <div class="small-box bg-info">
                                     <div class="inner">

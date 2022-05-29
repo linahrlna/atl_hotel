@@ -45,9 +45,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas Kamar</a>
-          </li>
-          <li class="nav-item">
             <a href="galeri.php" class="nav-link">Fasilitas Umum Hotel</a>
           </li>
           <li class="nav-item">
@@ -86,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                     <div class="card-body">
                       <table class="table table-bordered">
-                        <thead>
+                        <thead class="text-center">
                         <tr>
                             <th style="width: 10px">NO</th>
                             <th>Keterangan</th>
@@ -112,9 +109,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <td>
                                   <img class="d-block" src="gambar/<?php echo $row['foto']; ?>" width="200">
                               </td>
-                              <td>
-                                  <a href="edit_galeri.php?id_galeri=<?php echo $row['id_galeri']; ?>" class="btn btn btn-warning">Edit</a>
-                                  <a href="hapus_galeri.php?id_galeri=<?php echo $row['id_galeri']; ?>" class="btn btn btn-danger" onclick="return confirm('Anda yakin akan menghapus data ini ?')">Hapus</a>
+                              <td class="text-center">
+                                  <a href="edit_galeri.php?id_galeri=<?php echo $row['id_galeri']; ?>" class="btn btn btn-warning"><i class="fas fa-edit"></i></a>
+                                  <a href="hapus_galeri.php?id_galeri=<?php echo $row['id_galeri']; ?>" class="btn btn btn-danger" onclick="return confirm('Anda yakin akan menghapus data ini ?')"><i class="fas fa-trash"></i></a>
                               </td>
                           </tr>
                           <?php $no++; } ?>

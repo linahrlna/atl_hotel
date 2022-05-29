@@ -42,10 +42,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="kamar.php" class="nav-link">Kamar</a>
           </li>
           <li class="nav-item">
-            <a href="fasilitas.php" class="nav-link">Fasilitas Kamar</a>
-          </li>
-          <li class="nav-item">
-            <a href="galeri.php" class="nav-link">Galeri</a>
+            <a href="galeri.php" class="nav-link">Fasilitas Umum Hotel</a>
           </li>
           <li class="nav-item">
             <a href="users.php" class="nav-link">Users</a>
@@ -83,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                     <div class="card-body">
                       <table class="table table-bordered">
-                        <thead>
+                        <thead class="text-center">
                         <tr>
                             <th style="width: 10px">NO.</th>
                             <th>Nama</th>
@@ -92,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <th>Aksi</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                         <?php
                         include '../koneksi.php';
                         $no = 1;
@@ -112,8 +109,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             </td>
                             <td>
-                              <a href="edit_users.php?id=<?php echo $d['id']; ?>" class="btn btn btn-warning">Edit</a> 
-                              <a href="hapus_users.php?id=<?php echo $d['id']; ?>" class="btn btn btn-danger">Hapus</a>
+                              <a href="edit_users.php?id=<?php echo $d['id']; ?>" class="btn btn btn-warning"><i class="fas fa-edit"></i></a> 
+                              <a href="hapus_users.php?id=<?php echo $d['id']; ?>" class="btn btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                           </tr>
                           <?php
